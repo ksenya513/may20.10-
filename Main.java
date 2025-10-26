@@ -14,7 +14,24 @@ public class Main{
                 necessary[k]=cars[b];
                 k++;
             }
+        }
+        return necessary;
+    }
+     public static Car[] getCarByBrendAndYearOperational(Car[] cars, String Mark, int Y){
+        int k=0;
+        for (int i=0; i<cars.length;i++){
+            if ((cars[i].getMark().equals(Mark) )&&(2025-cars[i].getYear()>Y)){
+                k++; 
+            }
             
+        }
+        Car necessary[]=new Car[k];
+        k=0;
+        for (int b=0; b< cars.length ;b++){
+            if ((cars[b].getMark().equals(Mark)) && (2025-cars[b].getYear()>Y)){
+                necessary[k]=cars[b];
+                k++;
+            }
         }
         return necessary;
     }
@@ -30,6 +47,11 @@ public class Main{
         System.out.println("Машины марки Toyota:");
         for (int a=0; a< toyota.length;a++){
             System.out.println(toyota[a]);
+        }
+        Car toyota7[]=getCarByBrendAndYearOperational(cars, "Toyota",7);
+        System.out.println("Машины марки Toyota,которые эксплуатируются более 7 лет:");
+        for (int a=0; a< toyota7.length;a++){
+            System.out.println(toyota7[a]);
         }
     }
 }
