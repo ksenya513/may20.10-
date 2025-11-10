@@ -8,6 +8,6 @@ public String getDeviceType(){
 }
 @Override
     public String printDevice(){
-        return String.format("%d,%d,%s"+getDeviceType(),id,price,ip);
+        return String.format("%d, %d ,%s"+" " +getDeviceType(),id,price,ip);
     }
 }

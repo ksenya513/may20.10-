@@ -30,8 +30,8 @@ public abstract class device implements Printable{
     }
     public abstract String getDeviceType();
 
-    @Override
-      public String printDevice(){
-            return String.format("%d,%d,%s"+getDeviceType(),id,price,ip);
-      }
+    // @Override
+    //   public String printDevice(){
+    //         return String.format("%d,%d,%s"+getDeviceType(),id,price,ip);
+    //   }
 }
