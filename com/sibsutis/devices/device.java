@@ -1,9 +1,10 @@
 package com.sibsutis.devices;
-public abstract class device{
+import com.sibsutis.*;
+public abstract class device implements Printable{
     protected int id;
     protected int price;
     protected String ip;
-}
+
     public device(int id, int price, String ip){
         this.id=id;
         this.price=price;
@@ -27,9 +28,10 @@ public abstract class device{
     public void setIp(String ip){
         this.ip=ip;
     }
+    public abstract String getDeviceType();
 
     @Override
       public String printDevice(){
-            return String.format("%d,%d,%s",id,price,ip);
+            return String.format("%d,%d,%s"+getDeviceType(),id,price,ip);
       }
-    
+}
